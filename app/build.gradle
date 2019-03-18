@@ -24,10 +24,31 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation"org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
-    implementation 'com.android.support:appcompat-v7:28.0.0'
-    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
-    implementation 'com.android.support:design:28.0.0'
+
+    // Kotlin
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+
+    // compat lib
+    implementation "com.android.support:appcompat-v7:$support_lib_version"
+
+    // Constraint
+    implementation "com.android.support.constraint:constraint-layout:$constraint_version"
+
+    // design
+    implementation "com.android.support:design:$support_lib_version"
+
+    // Retrofit
+    implementation "com.squareup.retrofit2:retrofit:$retrofit_version"
+    implementation "com.squareup.retrofit2:converter-gson:$converter_gson_version"
+    implementation "com.squareup.okhttp3:logging-interceptor:$logging_interceptor_version"
+
+    // Android architecture comp
+    implementation "android.arch.lifecycle:extensions:$architecture_comp"
+
+    // Recycler
+    implementation "com.android.support:recyclerview-v7:$support_lib_version"
+
+    // Testing
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'

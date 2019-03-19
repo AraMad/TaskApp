@@ -58,7 +58,7 @@ interface IRouter {
      * Enum of all Activities(screens) in app
      */
     enum class Activities {
-
+        TASK_FLOW_SCREEN
     }
 
     // todo: add constants for new Fragments
@@ -66,6 +66,9 @@ interface IRouter {
      * Enum of all Fragments in app
      */
     enum class Fragments {
-
+        LOG_IN,
+        TASK_LIST,
+        TASK_DETAILS,
+        TASK_EDIT
     }
 }

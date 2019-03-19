@@ -1,3 +1,11 @@
 <resources>
     <dimen name="fab_margin">16dp</dimen>
+
+    <dimen name="preloader_size">48dp</dimen>
+    <dimen name="preloader_description_text_size">14sp</dimen>
+
+    <dimen name="sing_in_title_text_size">28sp</dimen>
+    <dimen name="sing_in_input_fields_width">250dp</dimen>
+
+
 </resources>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+                name="description"
+                type="String"/>
+    </data>
+
+    <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:background="@android:color/transparent"
+
+            tools:background="@android:color/black">
+
+        <ProgressBar
+                android:layout_width="@dimen/preloader_size"
+                android:layout_height="@dimen/preloader_size"
+
+                android:background="@android:color/transparent"
+                android:layout_gravity="center"/>
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:text="@{description}"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/preloader_description_text_size"
+                android:background="@android:color/transparent"
+                android:gravity="center"
+                android:layout_gravity="center"
+
+                tools:text="Loading..."/>
+    </LinearLayout>
+
+</layout>

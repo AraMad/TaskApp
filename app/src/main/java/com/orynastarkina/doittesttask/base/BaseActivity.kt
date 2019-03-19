@@ -5,6 +5,7 @@ import android.arch.lifecycle.ViewModel
 import android.databinding.DataBindingUtil
 import android.databinding.ViewDataBinding
 import android.os.Bundle
+import android.support.annotation.LayoutRes
 import android.support.v7.app.AlertDialog
 import android.support.v7.app.AppCompatActivity
 import com.orynastarkina.doittesttask.showPreLoader
@@ -37,6 +38,7 @@ abstract class BaseActivity<V : ViewModel, B : ViewDataBinding> : AppCompatActiv
 
     abstract fun getTagName(): String
 
+    @LayoutRes
     abstract fun getContentViewLayoutId(): Int
 
     /**
@@ -86,14 +88,14 @@ abstract class BaseActivity<V : ViewModel, B : ViewDataBinding> : AppCompatActiv
 
     override fun onResume() {
         super.onResume()
-        (viewModel as BaseViewModel).isLoading.observe(this, loadingObserver)
+        (viewModel as BaseViewModel<*>).isLoading.observe(this, loadingObserver)
     }
 
 
     override fun onPause() {
         super.onPause()
         preLoader?.dismiss()
-        (viewModel as BaseViewModel).isLoading.removeObserver(loadingObserver)
+        (viewModel as BaseViewModel<*>).isLoading.removeObserver(loadingObserver)
     }
 
     private var loadingObserver = Observer<Boolean> {

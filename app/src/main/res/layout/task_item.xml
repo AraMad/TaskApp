@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <TextView
+                android:id="@+id/taskTitle"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:textColor="@android:color/black"
+                android:textStyle="bold"
+                tools:text="Meeting with clients for discussing..."
+
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+        />
+
+        <TextView
+                android:id="@+id/taskDate"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+
+                tools:text="Due to 23/03/19"
+
+                app:layout_constraintTop_toBottomOf="@id/taskTitle"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/taskPriority"
+        />
+
+        <TextView
+                android:id="@+id/taskPriority"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:textColor="@android:color/black"
+                tools:text="Hight"
+                tools:drawableStart="@drawable/ic_prioryi_hight"
+
+                app:layout_constraintTop_toBottomOf="@id/taskTitle"
+                app:layout_constraintStart_toEndOf="@id/taskDate"
+                app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+        <ImageView
+                android:id="@+id/openArrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_open_arrow"
+
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+    </android.support.constraint.ConstraintLayout>
+
+</layout>

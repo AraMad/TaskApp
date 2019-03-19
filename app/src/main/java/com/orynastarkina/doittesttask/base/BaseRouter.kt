@@ -9,7 +9,7 @@ import java.util.*
 /**
  * Created by Oryna Starkina on 18.03.2019.
  */
-class BaseRouter(activity: AppCompatActivity) : IRouter {
+abstract class BaseRouter(activity: AppCompatActivity) : IRouter {
 
     protected var activityReference = WeakReference(activity)
 

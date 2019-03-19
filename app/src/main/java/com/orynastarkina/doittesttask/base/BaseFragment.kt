@@ -4,6 +4,7 @@ import android.arch.lifecycle.ViewModel
 import android.databinding.DataBindingUtil
 import android.databinding.ViewDataBinding
 import android.os.Bundle
+import android.support.annotation.LayoutRes
 import android.support.v4.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -27,6 +28,7 @@ abstract class BaseFragment<V : ViewModel, B : ViewDataBinding> : Fragment() {
      */
     abstract fun obtainViewModel(): V
 
+    @LayoutRes
     abstract fun getContentViewLayoutId(): Int
 
     abstract fun getTagName(): String

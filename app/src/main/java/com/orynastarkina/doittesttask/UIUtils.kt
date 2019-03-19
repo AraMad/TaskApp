@@ -1,5 +1,6 @@
 package com.orynastarkina.doittesttask
 
+import android.databinding.DataBindingUtil
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.support.v7.app.AlertDialog
@@ -14,17 +15,17 @@ fun showPreLoader(activity: BaseActivity<*, *>?,
     if (activity == null) {
         return null
     }
-    // todo: add view
-//    val binding = DataBindingUtil.inflate<PreloaderBinding>(
-//        activity.layoutInflater,
-//        R.layout.preloader,
-//        null,
-//        false)
-//    binding.description = descriptionText ?: activity
-//        .getString(R.string.preloader_description_text_default)
-//
+
+    val binding = DataBindingUtil.inflate<com.orynastarkina.doittesttask.databinding.PreloaderBinding>(
+        activity.layoutInflater,
+        R.layout.preloader,
+        null,
+        false)
+    binding.description = descriptionText ?: activity
+        .getString(R.string.preloader_description_text_default)
+
     val builder = AlertDialog.Builder(activity)
-//    builder.setView(binding.root)
+    builder.setView(binding.root)
 
     val alert = builder.create()
     alert.setCanceledOnTouchOutside(false)

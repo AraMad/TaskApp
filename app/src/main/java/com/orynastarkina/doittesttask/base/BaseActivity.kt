@@ -8,7 +8,7 @@ import android.os.Bundle
 import android.support.annotation.LayoutRes
 import android.support.v7.app.AlertDialog
 import android.support.v7.app.AppCompatActivity
-import com.orynastarkina.doittesttask.showPreLoader
+import com.orynastarkina.doittesttask.utils.showPreLoader
 
 /**
  * Created by Oryna Starkina on 18.03.2019.

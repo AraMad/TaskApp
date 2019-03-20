@@ -26,7 +26,7 @@ interface Endpoints {
     fun getTasks(
         @Query("page") page: Int,
         @Query("sort") sort: String
-    )
+    ): Call<TasksPage>
 
     @PUT("tasks/{task}")
     fun editTask(@Path("task") taskId: Int, @Body taskInfo: TaskInfo): RegisteredTask

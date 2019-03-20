@@ -1,6 +1,7 @@
 package com.orynastarkina.doittesttask.fragments
 
 import android.arch.lifecycle.Observer
+import android.support.design.widget.Snackbar
 import com.orynastarkina.doittesttask.BR
 import com.orynastarkina.doittesttask.MainViewModel
 import com.orynastarkina.doittesttask.R
@@ -25,6 +26,12 @@ class LoginFragment : BaseFragment<MainViewModel, FragmentLoginBinding>() {
         viewModel.fragmentRout.observe(this, Observer {
             it?.getContentIfNotHandled()?.let { direction ->
                 (activity as BaseActivity<*, *>).router.moveToNextFragment(direction)
+            }
+        })
+
+        viewModel.displayMessage.observe(this, Observer {
+            it?.getContentIfNotHandled()?.let { message ->
+                Snackbar.make(this.view!!, message, Snackbar.LENGTH_LONG).show()
             }
         })
     }

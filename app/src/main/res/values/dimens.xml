@@ -7,5 +7,5 @@
     <dimen name="sing_in_title_text_size">28sp</dimen>
     <dimen name="sing_in_input_fields_width">250dp</dimen>
 
-
+    <dimen name="fab_add_task_margins">18dp</dimen>
 </resources>

@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:tools="http://schemas.android.com/tools"
-        xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
@@ -28,7 +27,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintBottom_toTopOf="@id/email"
 
-                app:layout_constraintVertical_chainStyle="spread"
+                app:layout_constraintVertical_chainStyle="packed"
         />
 
         <EditText
@@ -61,30 +60,18 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/email"
-                app:layout_constraintBottom_toTopOf="@id/loginButton"/>
-
-        <TextView
-                android:id="@+id/checkboxHint"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-
-                android:textColor="@android:color/black"
-                android:text="@string/sing_in_checkbox_hint"
-
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toStartOf="@id/checkbox"
-                app:layout_constraintTop_toBottomOf="@id/password"
-
-                app:layout_constraintBottom_toTopOf="@+id/loginButton"/>
+                app:layout_constraintBottom_toTopOf="@id/checkbox"/>
 
         <android.support.v7.widget.AppCompatCheckBox
                 android:id="@+id/checkbox"
-                android:layout_width="wrap_content"
+                android:layout_width="@dimen/sing_in_input_fields_width"
                 android:layout_height="wrap_content"
 
                 android:checked="@={viewModel.loginCheckbox}"
 
-                app:layout_constraintStart_toEndOf="@id/checkboxHint"
+                android:text="@string/sing_in_checkbox_hint"
+
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/password"
 
@@ -102,7 +89,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/password"/>
+                app:layout_constraintTop_toBottomOf="@+id/checkbox"/>
 
     </android.support.constraint.ConstraintLayout>
 

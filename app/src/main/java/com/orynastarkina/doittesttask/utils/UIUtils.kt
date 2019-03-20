@@ -1,9 +1,10 @@
-package com.orynastarkina.doittesttask
+package com.orynastarkina.doittesttask.utils
 
 import android.databinding.DataBindingUtil
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.support.v7.app.AlertDialog
+import com.orynastarkina.doittesttask.R
 import com.orynastarkina.doittesttask.base.BaseActivity
 
 /**

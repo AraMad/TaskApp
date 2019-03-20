@@ -1,4 +1,4 @@
-package com.orynastarkina.doittesttask.dataLayer
+package com.orynastarkina.doittesttask.utils
 
 import android.content.Context
 import android.net.ConnectivityManager

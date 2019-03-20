@@ -1,4 +1,4 @@
-package com.orynastarkina.doittesttask
+package com.orynastarkina.doittesttask.utils
 
 /**
  * Created by Oryna Starkina on 19.03.2019.

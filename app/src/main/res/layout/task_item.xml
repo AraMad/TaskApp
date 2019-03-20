@@ -2,6 +2,10 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools">
 
+    <data>
+        <variable name="model" type="com.orynastarkina.doittesttask.dataLayer.retrofit.RegisteredTask"/>
+    </data>
+
     <android.support.constraint.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
@@ -11,6 +15,8 @@
 
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+
+                android:text="@{model.title}"
 
                 android:textColor="@android:color/black"
                 android:textStyle="bold"
@@ -26,7 +32,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
 
-
+                android:text='@{"Due to: " + model.dueBy}'
                 tools:text="Due to 23/03/19"
 
                 app:layout_constraintTop_toBottomOf="@id/taskTitle"
@@ -41,6 +47,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
 
+                android:text="@{model.priority}"
                 android:textColor="@android:color/black"
                 tools:text="Hight"
                 tools:drawableStart="@drawable/ic_prioryi_hight"

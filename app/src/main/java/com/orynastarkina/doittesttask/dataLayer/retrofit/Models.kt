@@ -8,7 +8,7 @@ import com.google.gson.annotations.SerializedName
 
 data class Error(
     @SerializedName("fields")
-    val fields: Fields = Fields(),
+    val fields: Fields? = null,
     @SerializedName("message")
     val message: String = ""
 )
@@ -55,4 +55,11 @@ data class Meta(
     val current: Int = 0,
     @SerializedName("limit")
     val limit: Int = 0
+)
+
+data class TasksPage(
+    @SerializedName("tasks")
+    val tasks: List<RegisteredTask> = listOf(),
+    @SerializedName("meta")
+    val meta: Meta = Meta()
 )

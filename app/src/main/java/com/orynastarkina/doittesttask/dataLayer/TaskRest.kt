@@ -102,7 +102,6 @@ class TaskRest(context: Context, private val prefs: SharedPreferences) : ITaskRe
         }
     }
 
-    // todo: add token
     override fun getTasks(page: Int, sort: String, callback: (data: TasksPage?, err: Throwable?) -> Unit) {
         if (networkManager.isNetworkAvailable()) {
             endpoints.getTasks(page, sort).enqueue(object : Callback<TasksPage> {
